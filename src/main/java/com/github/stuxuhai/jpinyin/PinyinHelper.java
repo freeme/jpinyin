@@ -407,8 +407,18 @@ public final class PinyinHelper {
 		result.setLength(0);
 		for (int i = 0, len = multiCount; i < len; i++) {
 			for (int j = 0, len1 = str.length(); j < len1; j++) {
-				String[] tempArr = temp[j].split(",");
-				result.append(tempArr[i]);
+//				String[] tempArr = temp[j].split(",");
+//				result.append(tempArr[i]);
+
+				String tempMulti = temp[j];
+				String[] tempArr = tempMulti.split(",");
+				if (tempArr.length == multiCount) {
+					result.append(tempArr[i]);
+				} else {
+					if (i < tempMulti.length()) {
+						result.append(tempMulti.charAt(i));
+					}
+				}
 			}
 			result.append('#');
 		}
