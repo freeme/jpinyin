@@ -9,7 +9,7 @@
 	<groupId>com.github.stuxuhai</groupId>
 	<artifactId>jpinyin</artifactId>
 	<name>jpinyin</name>
-	<version>1.1.8</version>
+	<version>1.2.0</version>
 	<packaging>jar</packaging>
 	<description>a opensource java library for converting chinese to pinyin</description>
 
@@ -85,7 +85,7 @@
 		</pluginManagement>
 
 		<plugins>
-			<plugin>
+<!-- 			<plugin>
 				<artifactId>maven-gpg-plugin</artifactId>
 				<version>1.6</version>
 				<executions>
@@ -97,7 +97,7 @@
 						</goals>
 					</execution>
 				</executions>
-			</plugin>
+			</plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -143,4 +143,11 @@
 			</plugin>
 		</plugins>
 	</build>
+		<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>nexus.wmqhealth.com</name>
+			<url>http://nexus.wmqhealth.com/repository/releases</url>
+		</repository>
+	</distributionManagement>
 </project>
